@@ -7,11 +7,14 @@ import {
   FaFileAlt,
   FaEnvelope,
   FaBars,
-} from "react-icons/fa"; // Import icons
+} from "react-icons/fa";
 import { useState } from "react";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false); // State to toggle menu
+
+  // Close the menu when a link is clicked
+  const handleLinkClick = () => setIsOpen(false);
 
   return (
     <nav className="bg-gray-800 text-white p-4">
@@ -35,37 +38,37 @@ export default function Navbar() {
         >
           <li className="flex items-center space-x-2 p-2 md:p-0">
             <FaHome />
-            <Link to="/" className="hover:text-gray-300">
+            <Link to="/" className="hover:text-gray-300" onClick={handleLinkClick}>
               Home
             </Link>
           </li>
           <li className="flex items-center space-x-2 p-2 md:p-0">
             <FaUser />
-            <Link to="/about" className="hover:text-gray-300">
+            <Link to="/about" className="hover:text-gray-300" onClick={handleLinkClick}>
               About
             </Link>
           </li>
           <li className="flex items-center space-x-2 p-2 md:p-0">
             <FaProjectDiagram />
-            <Link to="/projects" className="hover:text-gray-300">
+            <Link to="/projects" className="hover:text-gray-300" onClick={handleLinkClick}>
               Projects
             </Link>
           </li>
           <li className="flex items-center space-x-2 p-2 md:p-0">
             <FaLightbulb />
-            <Link to="/skills" className="hover:text-gray-300">
+            <Link to="/skills" className="hover:text-gray-300" onClick={handleLinkClick}>
               Skills
             </Link>
           </li>
           <li className="flex items-center space-x-2 p-2 md:p-0">
             <FaFileAlt />
-            <Link to="/resume" className="hover:text-gray-300">
+            <Link to="/resume" className="hover:text-gray-300" onClick={handleLinkClick}>
               Resume
             </Link>
           </li>
           <li className="flex items-center space-x-2 p-2 md:p-0">
             <FaEnvelope />
-            <Link to="/contact" className="hover:text-gray-300">
+            <Link to="/contact" className="hover:text-gray-300" onClick={handleLinkClick}>
               Contact
             </Link>
           </li>

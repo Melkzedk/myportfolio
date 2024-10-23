@@ -10,19 +10,20 @@ export default function Home() {
   return (
     <div className="bg-gray-100">
       {/* Hero Section */}
-      <div className="flex items-center justify-between h-screen p-8">
-        <div className="ml-4">
+      <div className="flex flex-col-reverse lg:flex-row items-center justify-between h-screen p-8">
+        {/* Text Section */}
+        <div className="ml-4 lg:ml-0 text-center lg:text-left">
           <h1 className="text-4xl font-bold">I'm a Full-Stack Developer</h1>
           <p className="mt-4 text-xl text-gray-700">
             Passionate about building scalable web applications.
           </p>
           <Link
-            to="#contact" // Change this to an ID for smooth scrolling
+            to="#contact"
             className="mt-8 inline-block px-6 py-3 bg-blue-500 text-white rounded"
           >
             Hire Me
           </Link>
-          <div className="mt-6 flex space-x-6">
+          <div className="mt-6 flex justify-center lg:justify-start space-x-6">
             <a
               href="https://www.linkedin.com/in/melkzedek-wafula-4a8b46203"
               target="_blank"
@@ -49,10 +50,12 @@ export default function Home() {
             </a>
           </div>
         </div>
+
+        {/* Image Section */}
         <img
           src={melkImage}
           alt="Melkzedek Wafula"
-          className="rounded-full w-72 h-72"
+          className="rounded-full w-72 h-72 sm:w-48 sm:h-48 md:w-56 md:h-56 lg:w-72 lg:h-72"
         />
       </div>
 
